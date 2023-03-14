@@ -12,8 +12,8 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://nofuss.pages.dev",
-  base: "/",
+  site: "https://ngmisl.github.io",
+  base: "/cantovapidemo",
   markdown: {
     shikiConfig: {
       theme: "slack-dark"
