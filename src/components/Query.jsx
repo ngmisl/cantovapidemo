@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
@@ -6,6 +6,11 @@ function QueryBalance() {
   const [tokenID, setTokenID] = useState("");
   const [balanceInfo, setBalanceInfo] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    queryBalance(1);
+  }, []);
+
 
   const handleTokenIDChange = (event) => {
     setTokenID(event.target.value);
