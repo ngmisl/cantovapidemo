@@ -2,14 +2,29 @@
   "compilerOptions": {
     "target": "es2017",
     "module": "commonjs",
-    "types": ["@astrojs/image/client"],
+    "esModuleInterop": true,
+    "types": [
+      "@astrojs/image/client"
+    ],
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@content/*": ["src/content/*"],
-      "@images/*": ["src/images/*"],
-      "@scripts/*": ["src/scripts/*"],
-    }
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@layouts/*": [
+        "src/layouts/*"
+      ],
+      "@content/*": [
+        "src/content/*"
+      ],
+      "@images/*": [
+        "src/images/*"
+      ],
+      "@scripts/*": [
+        "src/scripts/*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }

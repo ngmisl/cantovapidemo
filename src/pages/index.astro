@@ -1,28 +1,16 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Footer from "@components/Footer.astro";
-import Counter from "@components/Counter.astro";
-import counter from "@content/counter.json";
-import { homepage } from "@content/homepage";
-import Features from "@components/Features.astro";
+import Query from "@components/Query";
 ---
 
 <Layout>
   <section class="grid py-10 place-items-center text-center">
-    <h1 class="sm:text-4xl text-3xl font-bold mb-6 dark:text-white">No Fuss Astro Template</h1>
-    <p>An Astro Template for blog, docs or landing page without complicated design and setup.</p>
+    <h1 class="sm:text-4xl text-3xl font-bold mb-6 dark:text-ctp-green">Query Turntile Balance</h1>
+    <p class="text-ctp-green">Example ID: 169</p>
   </section>
-  {homepage.map((homepage) => <Features title={homepage.title} icon={homepage.icon} content={homepage.content} />)}
-  <section class="py-20 sm:flex sm:items-center sm:justify-evenly text-center sm:text-left">
-    {
-      (
-        <ul class="grid sm:grid-cols-3 gap-16">
-          {counter.map((counter) => (
-            <Counter number={counter.number} label={counter.label} />
-          ))}
-        </ul>
-      )
-    }
+  <section>
+    <Query client:load/>
   </section>
   <Footer />
 </Layout>

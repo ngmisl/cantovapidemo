@@ -8,38 +8,29 @@ import astroLayouts from "astro-layouts";
 import codeTitle from "remark-code-title";
 
 // https://astro.build/config
+import react from "@astrojs/react";
+
+// https://astro.build/config
 export default defineConfig({
   site: "https://nofuss.pages.dev",
   base: "/",
   markdown: {
     shikiConfig: {
-      theme: "slack-dark",
+      theme: "slack-dark"
     },
-    remarkPlugins: [
-      [
-        astroLayouts,
-        {
-          default: "@layouts/Layout.astro",
-          "pages/blog/**/*.mdx": "@layouts/BlogLayout.astro",
-        },
-      ],
-      codeTitle,
-    ],
+    remarkPlugins: [[astroLayouts, {
+      default: "@layouts/Layout.astro",
+      "pages/blog/**/*.mdx": "@layouts/BlogLayout.astro"
+    }], codeTitle]
   },
-  integrations: [
-    compress({
-      css: true,
-      html: true,
-      js: true,
-      img: true,
-      svg: true,
-      logger: 0,
-    }),
-    tailwind(),
-    sitemap(),
-    mdx(),
-    image({
-      serviceEntryPoint: "@astrojs/image/sharp",
-    }),
-  ],
+  integrations: [compress({
+    css: true,
+    html: true,
+    js: true,
+    img: true,
+    svg: true,
+    logger: 0
+  }), tailwind(), sitemap(), mdx(), image({
+    serviceEntryPoint: "@astrojs/image/sharp"
+  }), react()]
 });
