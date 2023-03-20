@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 function QueryBalance() {
-  const [tokenID, setTokenID] = useState("");
+  const [tokenID, setTokenID] = useState("169"); // Set default tokenID value to 169
   const [balanceInfo, setBalanceInfo] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -23,6 +23,10 @@ function QueryBalance() {
       })
       .catch((error) => console.error(error));
   };
+
+  useEffect(() => {
+    queryBalance(); // Call queryBalance function on initial load with default tokenID value
+  }, []); // Empty dependency array ensures the function is called only once on initial load
 
   return (
     <div className="flex items-center justify-center">
