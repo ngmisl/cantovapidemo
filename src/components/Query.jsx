@@ -7,11 +7,6 @@ function QueryBalance() {
   const [balanceInfo, setBalanceInfo] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    queryBalance(1);
-  }, []);
-
-
   const handleTokenIDChange = (event) => {
     setTokenID(event.target.value);
   };
