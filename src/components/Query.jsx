@@ -49,7 +49,7 @@ function QueryBalance() {
         {isLoading ? (
           <div className="flex items-center justify-center mt-4">
             <FontAwesomeIcon icon={faSpinner} size="lg" pulse />
-            <div className="ml-4">Loading...</div>
+            <div className="ml-4">...</div>
           </div>
         ) : (
           <div className="balance-info-wrapper mt-4">
