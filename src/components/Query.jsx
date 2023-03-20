@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 function QueryBalance() {
-  const [tokenID, setTokenID] = useState(""); // Set default tokenID value to 169
+  const [tokenID, setTokenID] = useState("169"); // Set default tokenID value to 169
   const [balanceInfo, setBalanceInfo] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
